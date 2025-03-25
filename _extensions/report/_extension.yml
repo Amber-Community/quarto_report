@@ -13,18 +13,18 @@ contributes:
       toc: false
       pdf-engine: pdflatex
       geometry:
-      - top=2.4cm
-      - bottom=2.4cm
-      - left=2.5cm
-      - right=2.5cm
+      - top=2.cm
+      - bottom=3.3cm
+      - left=2.cm
+      - right=2.cm
       block-headings: false
       biblio-style: authoryear-comp
       colorlinks: true
       fig-height: 5
       fig-width: 8
-      number-sections: true
+      number-sections: false
       number-depth: 2
-      linestretch: 1.5
+      linestretch: 1.2
       knitr:
         opts_chunk:
           echo: false

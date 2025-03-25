@@ -37,6 +37,10 @@ $endif$
     \rightline{\fontsize{24}{28}\sffamily\textcolor{white}{$subtitle$}}
     $endif$
   \end{textblock}
-  \mbox{}\clearpage
+  \mbox{}\clearpage\setcounter{page}{1}
+  $if(toc)$
+  \tableofcontents\clearpage
+  $endif$
+  \def\thepage{\arabic{page}}\setcounter{page}{1}
 }
 \makeatother

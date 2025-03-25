@@ -2,13 +2,80 @@
 title: "Title"
 subtitle: "Title 2"
 format: report-pdf
+toc: true
 keep-tex: true
 ---
 
-# Introduction
+```{r}
+#| label: load_packages
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
 
-My report
+# Heading 1
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+mollit anim id est laborum.
 
-More stuff
+## Heading 2
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+mollit anim id est laborum.
+
+### Heading 3
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+mollit anim id est laborum.
+
+- Bullet
+- Bullet
+- Bullet
+- Bullet_last
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+aliquip ex ea commodo.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+aliquip ex ea commodo.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+aliquip ex ea commodo.
+
+\newpage
+
+### Example Table
+
+```{r}
+tibble(
+  Col1 = c("TEXT", rep("Text", 5)),
+  Col2 = "",
+  Col3 = "",
+  Col4 = "",
+  Col5 = ""
+) |>
+  kbl(
+    format = "latex",
+    col.names = c("", "Heading", "Heading", "Heading", "Heading"),
+    booktabs = TRUE,
+    tabular = "tabularx", 
+    valign="{\\textwidth}"
+  ) |>
+  kable_styling(latex_table_env = "tabularx") |>
+  row_spec(0, bold = TRUE, color = "#FFFFFF", background = "#ce3f17") |>
+  row_spec(c(1, 6), bold = TRUE, background = "#fee0bf")
+
+```
 

@@ -6,23 +6,23 @@
 \captionsetup[table]{style=italic,format=hang,singlelinecheck=true}
 
 %% FONT
-\usepackage{bera}
-\usepackage[charter]{mathdesign}
 \usepackage[scale=0.9]{sourcecodepro}
-\usepackage[lf,t]{FiraSans}
+\usepackage[scaled]{helvet}
 \usepackage{fontawesome}
+\renewcommand{\familydefault}{\sfdefault}
 
 %% HEADERS AND FOOTERS
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\rfoot{\Large\sffamily\raisebox{-0.1cm}{\textbf{\thepage}}}
+\rfoot{\fontsize{10}{11}\color[RGB]{128,128,128}\sffamily\thepage}
 \makeatletter
-\lhead{\textsf{\expandafter{\@title}}}
+\lfoot{\fontsize{10}{11}\color[RGB]{128,128,128}\textsf{AMBER COMMUNITY ~ | ~ \expandafter{\@title}}}
+\lhead{\includegraphics[height=1.5cm]{figs/AC_Logo.png}}
 \makeatother
 \rhead{}
 \cfoot{}
-\setlength{\headheight}{15pt}
-\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{50pt}
+\renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0.4pt}
 \fancypagestyle{plain}{%
 \fancyhf{} % clear all header and footer fields
@@ -44,9 +44,9 @@
 
 %% SECTION TITLES
 \usepackage[compact,sf,bf]{titlesec}
-\titleformat*{\section}{\Large\sf\bfseries\color[rgb]{0.7,0,0}}
-\titleformat*{\subsection}{\large\sf\bfseries\color[rgb]{0.7,0,0}}
-\titleformat*{\subsubsection}{\sf\bfseries\color[rgb]{0.7,0,0}}
+\titleformat*{\section}{\centering\fontsize{22}{26}\sf\lsstyle\color[RGB]{77,77,77}\uppercase}
+\titleformat{\subsection}{\fontsize{14}{16}\sf\bfseries\color[RGB]{205,63,23}}{\thesubsection}{1em}{}[{\color[RGB]{77,77,77}\titlerule[0.8pt]}\vspace*{0.4cm}]
+\titleformat*{\subsubsection}{\fontsize{12}{14}\sf\bfseries\color[RGB]{77,77,77}}
 \titlespacing{\section}{0pt}{*5}{*1}
 \titlespacing{\subsection}{0pt}{*2}{*0.2}
 \titlespacing{\subsubsection}{0pt}{*1}{*0.1}
@@ -55,4 +55,6 @@
 %% PAGE BREAKING to avoid widows and orphans
 \clubpenalty = 2000
 \widowpenalty = 2000
-\usepackage{microtype}
+
+\usepackage{tabularx}
+\def\thepage{\roman{page}}
