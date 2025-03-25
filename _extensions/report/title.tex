@@ -10,15 +10,6 @@
 $if(title)$
 \title{$title$}
 $endif$
-$if(subtitle)$
-\usepackage{etoolbox}
-\makeatletter
-\providecommand{\subtitle}[1]{% add subtitle to \maketitle
-  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
-}
-\makeatother
-\subtitle{$subtitle$}
-$endif$
 \date{$date$}
 
 \def\Date{\number\day}
@@ -33,3 +24,19 @@ $endif$
 \setlength{\TPHorizModule}{1cm}
 \setlength{\TPVertModule}{1cm}
 
+%%%% FRONT PAGE
+
+\makeatletter
+\def\maketitle{
+  \thispagestyle{empty}
+  \placefig{0}{0}{width=21cm}{figs/AC_cover}
+  \begin{textblock}{9.5}(8.5,8)
+    \rightline{\fontsize{36}{48}\sffamily\textcolor{white}{\expandafter{\@title}}}
+    \vspace{0.3cm}
+    $if(subtitle)$
+    \rightline{\fontsize{24}{28}\sffamily\textcolor{white}{$subtitle$}}
+    $endif$
+  \end{textblock}
+  \mbox{}\clearpage
+}
+\makeatother
