@@ -30,17 +30,13 @@ $endif$
 \def\maketitle{
   \thispagestyle{empty}
   \placefig{0}{0}{width=21cm}{figs/AC_cover}
-  \begin{textblock}{9.5}(8.5,8)
-    \rightline{\fontsize{36}{48}\sffamily\textcolor{white}{\expandafter{\@title}}}
-    \vspace{0.3cm}
+  \begin{textblock}{9.5}(8.8,8.3)
+    \rightline{\fontsize{42}{50}\sffamily\textcolor{white}{\expandafter{\@title}}}
+    \vspace{0.5cm}
     $if(subtitle)$
-    \rightline{\fontsize{24}{28}\sffamily\textcolor{white}{$subtitle$}}
+    \rightline{\fontsize{22}{28}\sffamily\textcolor{white}{$subtitle$}}
     $endif$
   \end{textblock}
   \mbox{}\clearpage\setcounter{page}{1}
-  $if(toc)$
-  \tableofcontents\clearpage
-  $endif$
-  \def\thepage{\arabic{page}}\setcounter{page}{1}
 }
 \makeatother

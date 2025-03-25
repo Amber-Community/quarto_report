@@ -11,6 +11,8 @@ contributes:
       date: today
       date-format: "D MMMM YYYY"
       toc: false
+      toc-title: CONTENTS
+      toc-depth: 2
       pdf-engine: pdflatex
       geometry:
       - top=2.cm
@@ -30,7 +32,9 @@ contributes:
           echo: false
           warning: false
           message: false
+      microtypeoptions: spacing
       template-partials:
         - "before-title.tex"
         - "title.tex"
+        - "toc.tex"
       
