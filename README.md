@@ -13,7 +13,7 @@ You can use this as a template to create a report. To do this, use the
 following command:
 
 ``` bash
-quarto use template robjhyndman/ac_report
+quarto use template Amber-Community/quarto_report
 ```
 
 This will install the extension and create an example qmd file that you
@@ -26,7 +26,7 @@ document. From the quarto project or document directory, run the
 following command to install this format:
 
 ``` bash
-quarto install extension robjhyndman/ac_report
+quarto install extension Amber-Community/quarto_report
 ```
 
 ## Example
